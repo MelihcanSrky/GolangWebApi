@@ -47,7 +47,7 @@ func withJWTAuth(handlerFunc http.HandlerFunc, s Storage) http.HandlerFunc {
 			permissionDenied(w)
 			return
 		}
-		
+
 		userID, err := getID(r)
 		if err != nil {
 			permissionDenied(w)
